@@ -1142,7 +1142,7 @@ static const char __pyx_k_input_stream[] = "input_stream";
 static const char __pyx_k_TextIOWrapper[] = "TextIOWrapper";
 static const char __pyx_k_ArgumentParser[] = "ArgumentParser";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_percentage_of_1_0_of_input_to_ou[] = "percentage (of 1.0) of input to output";
+static const char __pyx_k_percentage_of_100_of_input_to_ou[] = "percentage (of 100) of input to output";
 static PyObject *__pyx_kp_s_;
 static PyObject *__pyx_n_s_ArgumentParser;
 static PyObject *__pyx_n_s_TextIOWrapper;
@@ -1170,7 +1170,7 @@ static PyObject *__pyx_n_s_parse_args;
 static PyObject *__pyx_n_s_parser;
 static PyObject *__pyx_kp_s_percent;
 static PyObject *__pyx_n_s_percent_2;
-static PyObject *__pyx_kp_s_percentage_of_1_0_of_input_to_ou;
+static PyObject *__pyx_kp_s_percentage_of_100_of_input_to_ou;
 static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_random;
 static PyObject *__pyx_n_s_stdin;
@@ -1178,7 +1178,8 @@ static PyObject *__pyx_n_s_strip;
 static PyObject *__pyx_n_s_sys;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_type;
-static PyObject *__pyx_float_0_1;
+static PyObject *__pyx_int_10;
+static PyObject *__pyx_int_100;
 static PyObject *__pyx_tuple__2;
 /* Late includes */
 
@@ -1255,7 +1256,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_parser, __pyx_k_parser, sizeof(__pyx_k_parser), 0, 0, 1, 1},
   {&__pyx_kp_s_percent, __pyx_k_percent, sizeof(__pyx_k_percent), 0, 0, 1, 0},
   {&__pyx_n_s_percent_2, __pyx_k_percent_2, sizeof(__pyx_k_percent_2), 0, 0, 1, 1},
-  {&__pyx_kp_s_percentage_of_1_0_of_input_to_ou, __pyx_k_percentage_of_1_0_of_input_to_ou, sizeof(__pyx_k_percentage_of_1_0_of_input_to_ou), 0, 0, 1, 0},
+  {&__pyx_kp_s_percentage_of_100_of_input_to_ou, __pyx_k_percentage_of_100_of_input_to_ou, sizeof(__pyx_k_percentage_of_100_of_input_to_ou), 0, 0, 1, 0},
   {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_n_s_random, __pyx_k_random, sizeof(__pyx_k_random), 0, 0, 1, 1},
   {&__pyx_n_s_stdin, __pyx_k_stdin, sizeof(__pyx_k_stdin), 0, 0, 1, 1},
@@ -1277,7 +1278,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * parser = argparse.ArgumentParser(description='')
  * parser.add_argument(             # <<<<<<<<<<<<<<
- * 	'-p', '--percent', default=0.1, type=float, help='percentage (of 1.0) of input to output')
+ * 	'-p', '--percent', default=10, type=float, help='percentage (of 100) of input to output')
  * args = parser.parse_args()
  */
   __pyx_tuple__2 = PyTuple_Pack(2, __pyx_kp_s_p, __pyx_kp_s_percent); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 7, __pyx_L1_error)
@@ -1292,7 +1293,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 
 static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
-  __pyx_float_0_1 = PyFloat_FromDouble(0.1); if (unlikely(!__pyx_float_0_1)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_10 = PyInt_FromLong(10); if (unlikely(!__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_100 = PyInt_FromLong(100); if (unlikely(!__pyx_int_100)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -1620,7 +1622,7 @@ if (!__Pyx_RefNanny) {
  * 
  * parser = argparse.ArgumentParser(description='')             # <<<<<<<<<<<<<<
  * parser.add_argument(
- * 	'-p', '--percent', default=0.1, type=float, help='percentage (of 1.0) of input to output')
+ * 	'-p', '--percent', default=10, type=float, help='percentage (of 100) of input to output')
  */
   __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_argparse); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1641,7 +1643,7 @@ if (!__Pyx_RefNanny) {
  * 
  * parser = argparse.ArgumentParser(description='')
  * parser.add_argument(             # <<<<<<<<<<<<<<
- * 	'-p', '--percent', default=0.1, type=float, help='percentage (of 1.0) of input to output')
+ * 	'-p', '--percent', default=10, type=float, help='percentage (of 100) of input to output')
  * args = parser.parse_args()
  */
   __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_parser); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 7, __pyx_L1_error)
@@ -1653,21 +1655,21 @@ if (!__Pyx_RefNanny) {
   /* "sample.py":8
  * parser = argparse.ArgumentParser(description='')
  * parser.add_argument(
- * 	'-p', '--percent', default=0.1, type=float, help='percentage (of 1.0) of input to output')             # <<<<<<<<<<<<<<
+ * 	'-p', '--percent', default=10, type=float, help='percentage (of 100) of input to output')             # <<<<<<<<<<<<<<
  * args = parser.parse_args()
  * 
  */
   __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_float_0_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_default, __pyx_int_10) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_type, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_percentage_of_1_0_of_input_to_ou) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_help, __pyx_kp_s_percentage_of_100_of_input_to_ou) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
 
   /* "sample.py":7
  * 
  * parser = argparse.ArgumentParser(description='')
  * parser.add_argument(             # <<<<<<<<<<<<<<
- * 	'-p', '--percent', default=0.1, type=float, help='percentage (of 1.0) of input to output')
+ * 	'-p', '--percent', default=10, type=float, help='percentage (of 100) of input to output')
  * args = parser.parse_args()
  */
   __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__2, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
@@ -1678,7 +1680,7 @@ if (!__Pyx_RefNanny) {
 
   /* "sample.py":9
  * parser.add_argument(
- * 	'-p', '--percent', default=0.1, type=float, help='percentage (of 1.0) of input to output')
+ * 	'-p', '--percent', default=10, type=float, help='percentage (of 100) of input to output')
  * args = parser.parse_args()             # <<<<<<<<<<<<<<
  * 
  * input_stream = io.TextIOWrapper(sys.stdin.buffer, newline=None, encoding='latin1')
@@ -1736,7 +1738,7 @@ if (!__Pyx_RefNanny) {
  * 
  * for line in input_stream:             # <<<<<<<<<<<<<<
  * 
- * 	if (random.random()  < args.percent):
+ * 	if (random.random()  * 100 < args.percent):
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_input_stream); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
@@ -1786,7 +1788,7 @@ if (!__Pyx_RefNanny) {
     /* "sample.py":15
  * for line in input_stream:
  * 
- * 	if (random.random()  < args.percent):             # <<<<<<<<<<<<<<
+ * 	if (random.random()  * 100 < args.percent):             # <<<<<<<<<<<<<<
  * 		print(line.strip())
  */
     __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_random); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
@@ -1809,50 +1811,53 @@ if (!__Pyx_RefNanny) {
     if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 15, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_args); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 15, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Multiply(__pyx_t_4, __pyx_int_100); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 15, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_percent_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 15, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 15, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_args); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 15, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_percent_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_3, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 15, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 15, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_7) {
 
       /* "sample.py":16
  * 
- * 	if (random.random()  < args.percent):
+ * 	if (random.random()  * 100 < args.percent):
  * 		print(line.strip())             # <<<<<<<<<<<<<<
  */
       __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_line); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_strip); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 16, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_strip); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_1 = NULL;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
-        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_4);
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
         if (likely(__pyx_t_1)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
           __Pyx_INCREF(__pyx_t_1);
           __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_4, function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
         }
       }
-      __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
+      __pyx_t_4 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 16, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (__Pyx_PrintOne(0, __pyx_t_3) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 16, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      if (__Pyx_PrintOne(0, __pyx_t_4) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
       /* "sample.py":15
  * for line in input_stream:
  * 
- * 	if (random.random()  < args.percent):             # <<<<<<<<<<<<<<
+ * 	if (random.random()  * 100 < args.percent):             # <<<<<<<<<<<<<<
  * 		print(line.strip())
  */
     }
@@ -1862,7 +1867,7 @@ if (!__Pyx_RefNanny) {
  * 
  * for line in input_stream:             # <<<<<<<<<<<<<<
  * 
- * 	if (random.random()  < args.percent):
+ * 	if (random.random()  * 100 < args.percent):
  */
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
